@@ -4,7 +4,7 @@ import path from 'path';
 
 const config: Configuration = {
   mode: 'development',
-  entry: './src/entry.tsx',
+  entry: ['./src/wdyr.ts', './src/entry.tsx'],
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
