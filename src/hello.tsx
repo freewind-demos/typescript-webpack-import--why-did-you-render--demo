@@ -1,7 +1,7 @@
 import React, {FC, useState} from 'react';
 
-export const Hello: FC = () => {
-  console.log("### > Hello")
+// `React.memo` is needed for function component
+export const Hello: FC = React.memo(() => {
   const [count, setCount] = useState(0)
   return <div>
     <h1>Hello {count}</h1>
@@ -9,4 +9,7 @@ export const Hello: FC = () => {
       <button onClick={() => setCount(n => n + 1)}>Increase</button>
     </div>
   </div>;
-}
+})
+
+// If the component is not Pure Component, we should set `whyDidYouRender` to `true` manually
+// (Hello as any).whyDidYouRender = true
