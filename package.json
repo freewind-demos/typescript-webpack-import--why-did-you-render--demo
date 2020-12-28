@@ -3,6 +3,7 @@
     "demo": "webpack-dev-server --open"
   },
   "dependencies": {
+    "@welldone-software/why-did-you-render": "6.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "ts-node": "9.1.1"

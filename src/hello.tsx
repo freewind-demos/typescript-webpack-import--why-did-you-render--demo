@@ -1,9 +1,12 @@
-import React, { FC } from 'react';
+import React, {FC, useState} from 'react';
 
-type Props = {};
-
-export const Hello: FC<Props> = ({}) => {
+export const Hello: FC = () => {
+  console.log("### > Hello")
+  const [count, setCount] = useState(0)
   return <div>
-    <h1>Hello React</h1>
+    <h1>Hello {count}</h1>
+    <div>
+      <button onClick={() => setCount(n => n + 1)}>Increase</button>
+    </div>
   </div>;
 }
