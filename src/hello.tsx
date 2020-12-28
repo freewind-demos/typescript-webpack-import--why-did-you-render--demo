@@ -9,7 +9,7 @@ export const Hello: FC = React.memo(() => {
       <button onClick={() => setCount(n => n + 1)}>Increase</button>
     </div>
   </div>;
-})
+});
 
 // If the component is not Pure Component, we should set `whyDidYouRender` to `true` manually
-// (Hello as any).whyDidYouRender = true
+// Hello.whyDidYouRender = true
